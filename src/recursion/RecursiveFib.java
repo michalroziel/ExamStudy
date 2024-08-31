@@ -1,3 +1,5 @@
+package recursion;
+
 public class RecursiveFib {
 
     public int computeRecFib(int sequenceToCompute){

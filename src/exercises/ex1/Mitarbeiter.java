@@ -3,6 +3,10 @@ package exercises.ex1;
 public class Mitarbeiter extends Person{
 
 
+    public String getEmail() {
+        return email;
+    }
+
     private String email;
 
     public Mitarbeiter(String vorname, String nachname, String email ){
@@ -16,6 +20,7 @@ public class Mitarbeiter extends Person{
         Reservierung reservierung = new Reservierung( beginn,ende);
         reservierung.setBemerkung(bemerkung);
         reservierung.setRaum(raum);
+        reservierung.setMitarbeiter(this);
         raum.addReservierung(reservierung);
 
     }

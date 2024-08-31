@@ -16,7 +16,7 @@ public class SystemTestDrive {
         m2.reserviere(r2,new Uhrzeit(12,30),new Uhrzeit(13,30),"Prog 2");
         m2.reserviere(r3,new Uhrzeit(9,30),new Uhrzeit(11,30),"ITM");
 
-
+        System.out.println(r1);
 
     }
 }

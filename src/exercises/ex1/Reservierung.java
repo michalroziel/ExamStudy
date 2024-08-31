@@ -2,6 +2,10 @@ package exercises.ex1;
 
 public class Reservierung {
 
+    public String getBemerkung() {
+        return bemerkung;
+    }
+
     private String bemerkung;
     Uhrzeit beginn ;
     Uhrzeit ende;

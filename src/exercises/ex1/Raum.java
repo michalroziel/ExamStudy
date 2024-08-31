@@ -1,6 +1,8 @@
 package exercises.ex1;
 
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.function.Consumer;
 
 public class Raum {
     private int geb;
@@ -22,7 +24,28 @@ public class Raum {
 
     @Override
     public String toString(){
-        return this.geb + "-" + this.etage + "." + this.raum;
+
+        StringBuilder sb  = new StringBuilder();
+        sb.append(this.geb).append("-").append(this.etage).append(".").append(this.raum);
+
+        Iterator<Reservierung> myiter = buchungen.iterator();
+
+
+        while(myiter.hasNext()){
+        Reservierung reserv = myiter.next();
+
+            sb.append("\ngebucht von \n")
+                    .append(reserv.mitarbeiter.getVorname()).append(" ")
+                    .append(reserv.mitarbeiter.getNachname()).append(" ")
+                    .append(reserv.mitarbeiter.getEmail()).append(" ")
+                    .append("von ").append(reserv.beginn)
+                    .append("bis ").append(reserv.ende)
+                    .append(" für ")
+                    .append(reserv.getBemerkung());
+
+        }
+        return sb.toString();
+
     }
 
 
