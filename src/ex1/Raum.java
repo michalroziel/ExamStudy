@@ -1,8 +1,7 @@
-package exercises.ex1;
+package ex1;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.function.Consumer;
 
 public class Raum {
     private int geb;

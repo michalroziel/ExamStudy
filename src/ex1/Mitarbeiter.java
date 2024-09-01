@@ -1,4 +1,4 @@
-package exercises.ex1;
+package ex1;
 
 public class Mitarbeiter extends Person{
 
