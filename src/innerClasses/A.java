@@ -16,5 +16,16 @@ public class A {
             System.out.println("j:" + j);
 
         }
+
+        public static class C{
+
+        }
     }
+
+    public static void main(String[] args) {
+        A a = new A();
+        A.B b = a.new B();
+        A.B.C c =  new B.C();
+    }
+
 }
